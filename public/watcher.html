@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+    </body>
+    <script src="./jquery.js"></script>
+    <script>
+    function getNext(){
+        $.get('/nextTask',function(task){
+            document.write(JSON.stringify(task)+"\</br>")
+            getNext()
+        })
+    }
+    getNext()
+    </script>
+</html>
